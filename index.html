@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Music Player</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Your Library</h2>
+      <button class="create-btn">➕ Create Playlist</button>
+    
+      <ul class="sidebar-links">
+        <li>🎵 Liked Songs</li>
+        <li>🔥 Recently Played</li>
+        <li>📁 My Albums</li>
+        <li>🎤 Artists</li>
+        <li>📅 Made for You</li>
+      </ul>
+    
+      <div class="sidebar-footer">
+        <p>📱 Install App</p>
+        <p>⚙️ Settings</p>
+      </div>
+    </aside>
+    
+
+    <main class="main-content">
+      <header>
+        <input type="text" id="search-input" placeholder="What do you want to play?" />
+
+      </header>
+      <h1>Popular Albums</h1>
+      <div class="albums">
+        <div class="album-card" data-audio="music/Bum Bum Bole.mp3">
+          <img src="pic/bum-bum-bole.jpg" alt="Bum Bum Bole"/>
+          <h3>Bum Bum Bole</h3>
+          <p> Aamir Khan, Armaan Malik, Shaan</p>
+        </div>
+        <div class="album-card"  data-audio="music/Badtameez Dil .mp3">
+          <img src="pic/badtameex dil.jpg" alt="YJHD"/>
+          <h3>Badtameez dil</h3>
+          <p>Pritam</p>
+        </div>
+        <div class="album-card"   data-audio="music/Young G.O.A.T.mp3">
+          <img src="pic/young goat.jpg" alt="GOAT"/>
+          <h3>Young G.O.A.T</h3>
+          <p>Cheema Y, Gur Sidhu</p>
+        </div>
+        <div class="album-card"  data-audio="music/finding her.mp3">
+          <img src="pic/Finding her.jpg" alt="Finding Her"/>
+          <h3>Finding Her</h3>
+          <p>Kushagra, Bharath, Saaheal</p>
+        </div>
+        <div class="album-card" data-audio="music/daylight.mp3">
+          <img src="pic/daylight.jpg" alt="Daylight"/>
+          <h3>Daylight</h3>
+          <p>David Kushner</p>
+        </div>
+
+        <div class="album-card" data-audio="music/Mahiye jinna sona.mp3">
+          <img src="pic/Mahiye jinna .jpg" alt="Mahiye Jinna Sohna"/>
+          <h3>Mahiye Jinna Sohna</h3>
+          <p>Darshan Raval </p>
+        </div>
+        <div class="album-card" data-audio="music/Dance Basanti .mp3">
+          <img src="pic/dance basanti.jpg" alt="Dance Basanti"/>
+          <h3>Dance Basanti </h3>
+          <p>Anushka, Vishal,Sachin–Jigar</p>
+        </div>
+
+       <div class="album-card" data-audio="music/Deva Deva.mp3">
+        <img src="pic/deva deva.jpg" alt="Deva Deva"/>
+        <h3>Deva Deva</h3>
+        <p>Arijit Singh,Jonita Gandhi,Amitabh Bhattacharya</p>
+      </div>
+
+      <div class="album-card" data-audio="music/Illahi .mp3">
+        <img src="pic/illahi.jpg" alt="Illahi"/>
+        <h3>Illahi </h3>
+        <p> Arijit Singh</p>
+      </div>
+
+      <div class="album-card" data-audio="music/Jane Kyun .mp3">
+        <img src="pic/jane kyu.jpg" alt="Jane Kyun"/>
+        <h3>Jane Kyun</h3>
+        <p> Udit Narayan, Alka Yagnik</p>
+      </div>
+
+      <div class="album-card" data-audio="music/Kholo.mp3">
+        <img src="pic/kholo kholo.jpg" alt="Kholo Khole"/>
+        <h3>Kholo Khole</h3>
+        <p> Raman Mahadevan</p>
+      </div>
+
+      <div class="album-card" data-audio="music/Kesariya .mp3">
+        <img src="pic/Kesariya.jpg" alt="Kesariya"/>
+        <h3>Kesariya</h3>
+        <p>Arijit Singh</p>
+      </div>
+      <div class="album-card" data-audio="music/Aal Izz Well .mp3">
+        <img src="pic/all is well.jpg" alt="All is Well"/>
+        <h3>Aal Izz Well</h3>
+        <p> Sonu,
+          Swanand Kirkire 
+            and Shaan</p> 
+          
+      </div>
+
+      <div class="album-card" data-audio="music/Badri Ki Dulhania .mp3">
+        <img src="pic/badri.jpg" alt="Badri Ki Dulhania"/>
+        <h3>Badri ki Dulhania</h3>
+        <p>Neha, Monali Thakur,
+          Dev Negi</p>
+      </div>
+
+
+      <div class="album-card" data-audio="music/Namo Namo .mp3">
+        <img src="pic/namo.jpg" alt="Namo Namo"/>
+        <h3>Namo Namo</h3>
+        <p>Amit Trivedi</p>
+      </div>
+
+
+
+      </div>
+
+      <div class="music-player">
+        <div class="player-left">
+          <img id="song-cover" src="pic/placeholder.jpg" alt="Cover" />
+          <div>
+            <p id="current-song">Select a song</p>
+            <small id="current-artist">Artist Name</small>
+          </div>
+        </div>
+      
+        <div class="player-center">
+          <div class="controls">
+            <button id="prev-btn">⏮️</button>
+            <button id="play-btn">▶️</button>
+            <button id="next-btn">⏭️</button>
+          </div>
+          <div class="seekbar-container">
+            <span id="current-time">0:00</span>
+            <input type="range" id="seek-bar" value="0" />
+            <span id="total-duration">0:00</span>
+          </div>
+        </div>
+      
+        
+      
+        <audio id="audio-player"></audio>
+      </div>
+      
+
+      
+
+
+    </main>
+  </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
